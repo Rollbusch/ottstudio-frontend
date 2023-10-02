@@ -1,0 +1,167 @@
+.header {
+  padding: 2.5rem;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  gap: 6rem;
+}
+
+.navigation a {
+  color: #fefefe;
+  font-size: 13.4px;
+  font-family: Helvetica;
+  font-weight: 300;
+  line-height: 18.09px;
+  text-decoration: none;
+  height: fit-content;
+  text-transform: capitalize;
+  position: relative;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+  position: relative;
+}
+
+.icons {
+  display: flex;
+  gap: 24px;
+}
+
+.icons img {
+  cursor: pointer;
+}
+
+.sandwichMenu,
+.content input {
+  display: none;
+}
+
+.navigation a.ativo {
+  color: #cbf244;
+  font-weight: 700 !important;
+}
+
+.bar {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  position: relative;
+  margin-top: 4px;
+}
+
+.current {
+  height: 100%;
+  width: 2rem;
+  background-color: #fff;
+  left: 0;
+  position: absolute;
+  transition: 0.5s ease-in-out;
+}
+
+@media (width <= 1400px) {
+  .navigation,
+  .links {
+    gap: 5rem;
+  }
+
+  .header {
+    padding: 2rem;
+  }
+}
+
+@media (width <= 1200px) {
+  .navigation,
+  .links {
+    gap: 4rem;
+  }
+}
+
+@media (width <= 992px) {
+  .navigation,
+  .links {
+    gap: 3rem;
+  }
+
+  .header {
+    padding: 1.5rem;
+  }
+}
+
+@media (width <= 768px) {
+  .sandwichMenu {
+    display: block;
+    position: relative;
+    width: 2rem;
+    height: 4px;
+    background-color: #fefefe;
+    border-radius: 0.5rem;
+  }
+
+  .sandwichMenu::after,
+  .sandwichMenu::before {
+    content: "";
+    width: 2rem;
+    height: 4px;
+    background-color: #fefefe;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+    border-radius: 0.5rem;
+  }
+
+  .sandwichMenu::after {
+    top: -8px;
+  }
+
+  .sandwichMenu::before {
+    top: 8px;
+  }
+
+  .crossMenu {
+    width: 2rem;
+    height: 4px;
+    background-color: #fefefe;
+    transform: rotate(45deg);
+    transition: 0.5s ease-in-out;
+  }
+
+  .crossMenu::after,
+  .crossMenu::before {
+    top: 0;
+    transition: 0.5s ease-in-out;
+  }
+
+  .crossMenu::after {
+    transform: rotate(90deg);
+  }
+
+  .uncrossMenu {
+    transition: 0.5s ease-in-out;
+    transform: rotate(0deg);
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+}

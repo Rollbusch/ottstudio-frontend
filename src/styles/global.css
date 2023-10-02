@@ -1,0 +1,17 @@
+* {
+    font-family: Helvetica;
+}
+
+body {
+    margin: 0;
+    background-color: gray;
+}
+
+:root {
+    --white-gray: #fefefe;
+    --gray: #f0f0f0;
+    --gray-dark: #333333;
+    --blue: #0016FF;
+    --dark-color: #0D0D0D;
+    --green: #CBF244;
+}
