@@ -1,6 +1,10 @@
+* {
+  margin: 0;
+}
+
 body {
   margin: 0;
-  background-color: var(--background-color);
+  background-color: #0016ff;
 }
 
 body.bluescreen {

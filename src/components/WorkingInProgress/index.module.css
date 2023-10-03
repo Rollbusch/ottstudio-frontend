@@ -1,0 +1,83 @@
+.wip {
+  margin: 3rem auto;
+}
+
+.content {
+  width: 421px;
+  border: 1px solid #cbf244;
+  padding: 56px 0 0.5rem;
+  margin: 0 auto 2.5rem;
+}
+
+.logo {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+}
+
+.wip h4 {
+  color: #fefefe;
+  font-size: 34.26px;
+  font-weight: 700;
+  word-wrap: break-word;
+  padding: 0 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.wip p {
+  font-size: 30.26px;
+  font-weight: 300;
+  word-wrap: break-word;
+  color: #fefefe;
+  padding: 2.5rem 1.5rem 0.5rem;
+  border-bottom: 1px solid #cbf244;
+}
+
+.wip p:last-of-type {
+  border: none;
+}
+
+.contato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contato a {
+  text-decoration: none;
+  font-size: 17.83px;
+  font-weight: 400;
+  word-wrap: break-word;
+  color: #fefefe;
+}
+
+@media (max-width: 630px) {
+
+  .wip {
+    margin: 2rem 0;
+    padding: 1rem;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .logo {
+    position: relative;
+    margin: 0 auto 2.5rem;
+    display: block;
+    right: 0;
+    bottom: 0;
+  }
+
+  .wip h4 {
+    font-size: 25.47px;
+    margin-bottom: 2rem;
+  }
+
+  .wip p {
+    font-size: 22.50px;
+    padding: 1.5rem 0 0.5rem 1.5rem;
+  }
+}
