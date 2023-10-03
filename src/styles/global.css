@@ -1,17 +1,22 @@
-* {
-    font-family: Helvetica;
-}
-
 body {
-    margin: 0;
-    background-color: gray;
+  margin: 0;
+  background-color: var(--background-color);
 }
 
-:root {
-    --white-gray: #fefefe;
-    --gray: #f0f0f0;
-    --gray-dark: #333333;
-    --blue: #0016FF;
-    --dark-color: #0D0D0D;
-    --green: #CBF244;
+body.bluescreen {
+  --letter-color: #fefefe;
+  --active-letter-color: #cbf244;
+  --background-color: #0016ff;
+  --logo: url("/logo-white.svg");
+  --logo-behance: url("/logo-behance-green.svg");
+  --logo-instagram: url("/logo-instagram-green.svg");
+}
+
+body.whitescreen {
+  --letter-color: #0016ff;
+  --active-letter-color: #0016ff;
+  --background-color: #f0f0f0;
+  --logo: url("/logo-blue.svg");
+  --logo-behance: url("/logo-behance-blue.svg");
+  --logo-instagram: url("/logo-instagram-blue.svg");
 }

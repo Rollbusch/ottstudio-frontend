@@ -3,19 +3,12 @@ import Link from "next/link";
 import styles from "./index.module.css";
 import Container from "@/components/Container";
 
-import Behance from "./assets/behance.svg";
-import Instagram from "./assets/instagram.svg";
-import Logo from "../../../public/logo.svg";
-import Image from "next/image";
 import { useRouter } from "next/router";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 export default function Header() {
   const [sandwichMenu, setSandwichMenu] = useState(false);
-  const [currentActive, setCurrentActive] = useState(1);
-  const [position, setPosition] = useState(0);
   const router = useRouter();
-  const barRef = useRef();
 
   const pages = [
     {
@@ -53,7 +46,7 @@ export default function Header() {
         <div className={styles.content}>
           <div className={styles.group}>
             <Link href="/">
-              <Image src={Logo} alt="logo-ottstudio" />
+              <div />
             </Link>
             <span
               onClick={() => setSandwichMenu(!sandwichMenu)}
@@ -62,6 +55,7 @@ export default function Header() {
               }`}
             ></span>
           </div>
+          <input type="checkbox" id="sandwich-menu" checked={sandwichMenu} />
           <nav className={styles.navigation}>
             <div className={styles.links}>
               {pages.map((page) => (
@@ -76,10 +70,10 @@ export default function Header() {
             </div>
             <div className={styles.icons}>
               <a href="" target="_blank">
-                <Image src={Behance} alt="behance" />
+                <div />
               </a>
               <a href="" target="_blank">
-                <Image src={Instagram} alt="instagram" />
+                <div />
               </a>
             </div>
           </nav>
