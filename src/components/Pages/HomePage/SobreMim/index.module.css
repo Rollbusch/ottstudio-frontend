@@ -1,0 +1,62 @@
+.sobreMim {
+  max-width: 545px;
+}
+
+.hide {
+  opacity: 0;
+  transition: 0.5s ease-out;
+}
+
+.show {
+  transition: 0.5s ease-out;
+  opacity: 1;
+}
+
+.imageGroup {
+  position: relative;
+}
+
+.imageGroup h4 {
+  position: absolute;
+  color: #0016ff;
+  font-size: 25.12px;
+  font-weight: 700;
+  word-wrap: break-word;
+  bottom: 1rem;
+  left: 1.5rem;
+}
+
+.sobreMim p {
+  padding-left: 1.5rem;
+  color: var(--letter-color);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 20.25px;
+  word-wrap: break-word;
+  margin-top: 1rem;
+}
+
+@media (max-width: 992px) {
+  .sobreMim {
+    max-width: 345px;
+  }
+  .imageGroup img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .sobreMim {
+    max-width: 100%;
+  }
+  .imageGroup {
+    width: 100%;
+    height: auto;
+    margin: 0 -16px;
+  }
+
+  .sobreMim p {
+    padding: 0 1.5rem ;
+  }
+}

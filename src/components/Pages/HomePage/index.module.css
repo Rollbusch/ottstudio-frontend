@@ -1,0 +1,89 @@
+.homePage {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5rem;
+}
+
+.homePage h2 {
+  font-size: 36.01px;
+  font-weight: 300;
+  word-wrap: break-word;
+  color: var(--letter-color);
+  position: relative;
+  padding-right: 6rem;
+}
+
+.crossCta {
+  position: relative;
+}
+
+.crossCta::after,
+.crossCta::before {
+  content: "";
+  width: 22px;
+  height: 4px;
+  background-color: var(--letter-color);
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.crossCta::before {
+  transform: rotate(90deg);
+}
+
+.crossCta.uncross::before {
+  transform: rotate(180deg);
+  transition: 0.3s ease-in-out;
+}
+
+.crossCta.cross::before {
+  transform: rotate(90deg);
+  transition: 0.3s ease-in-out;
+}
+
+@media (max-width: 1200px) {
+  .homePage {
+    gap: 3rem;
+  }
+
+  .homePage h2 {
+    padding-right: 1rem;
+    font-size: 30.01px;
+  }
+}
+
+@media (max-width: 992px) {
+  .homePage {
+    gap: 2rem;
+  }
+
+  .homePage h2 {
+    padding-right: 2rem;
+    font-size: 25.01px;
+  }
+}
+
+@media (max-width: 768px) {
+  .homePage {
+    gap: 2rem;
+  }
+
+  .homePage h2 {
+    padding-right: 1rem;
+    font-size: 20.01px;
+  }
+}
+
+@media (max-width: 576px) {
+  .homePage {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+}

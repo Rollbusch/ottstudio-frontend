@@ -19,9 +19,9 @@
   line-height: 18.09px;
   text-decoration: none;
   height: fit-content;
-  text-transform: capitalize;
   position: relative;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 .links {

@@ -55,7 +55,7 @@ export default function Header() {
               }`}
             ></span>
           </div>
-          <input type="checkbox" id="sandwich-menu" checked={sandwichMenu} />
+          <input type="checkbox" id="sandwich-menu" checked={sandwichMenu} onChange={() => {}} />
           <nav className={styles.navigation}>
             <div className={styles.links}>
               {pages.map((page) => (
@@ -69,10 +69,10 @@ export default function Header() {
               ))}
             </div>
             <div className={styles.icons}>
-              <a href="" target="_blank">
+              <a href="https://www.instagram.com/aprendasobrelogo/" target="_blank">
                 <div />
               </a>
-              <a href="" target="_blank">
+              <a href="https://www.behance.net/ottstudio" target="_blank">
                 <div />
               </a>
             </div>
