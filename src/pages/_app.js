@@ -2,8 +2,6 @@ import "@/styles/global.css";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
-import { Analytics } from '@vercel/analytics/react'
-
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,11 +19,11 @@ export default function App({ Component, pageProps }) {
       document.body.classList.remove(isBluePage ? "bluescreen" : "whitescreen");
     };
   }, [router]);
-  
+
   return (
     <main className={inter.className}>
+      <h1 style={{ display: "none" }}>Ottstudio</h1>
       <Component {...pageProps} />
-      <Analytics />
     </main>
   );
 }

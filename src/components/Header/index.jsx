@@ -45,7 +45,7 @@ export default function Header() {
       <Container>
         <div className={styles.content}>
           <div className={styles.group}>
-            <Link href="/">
+            <Link href="/" aria-label="Ir para home">
               <div />
             </Link>
             <span
@@ -69,10 +69,10 @@ export default function Header() {
               ))}
             </div>
             <div className={styles.icons}>
-              <a href="https://www.instagram.com/aprendasobrelogo/" target="_blank">
+              <a href="https://www.instagram.com/aprendasobrelogo/" target="_blank" aria-label="Ir para Instagram">
                 <div />
               </a>
-              <a href="https://www.behance.net/ottstudio" target="_blank">
+              <a href="https://www.behance.net/ottstudio" target="_blank" aria-label="Ir para behance">
                 <div />
               </a>
             </div>
