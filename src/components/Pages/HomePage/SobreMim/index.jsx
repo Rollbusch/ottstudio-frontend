@@ -7,7 +7,7 @@ export default function SobreMim({ showBio }) {
   return (
     <div className={`${styles.sobreMim} ${showBio ? styles.show : styles.hide}`}>
       <div className={styles.imageGroup}>
-        <Image src={Placeholder} alt="picture" />
+        <Image src={Placeholder} alt="picture" priority />
         <h4>Prazer, João.</h4>
       </div>
       <p>
