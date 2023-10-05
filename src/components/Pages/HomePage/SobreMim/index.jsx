@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
 
-import Placeholder from "./assets/placeholder.png";
+import Placeholder from "./assets/Placeholder.png";
 import Image from "next/image";
 
 export default function SobreMim({ showBio }) {
