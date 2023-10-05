@@ -76,6 +76,7 @@ export default function Header() {
                 <div />
               </a>
             </div>
+            <a href="mailto:contato@ottbrands.com">contato@ottbrands.com</a>
           </nav>
         </div>
       </Container>

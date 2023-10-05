@@ -86,4 +86,10 @@
     align-items: center;
   }
 
+  .homePage h2 {
+    font-size: 31.96px;
+    padding: 0;
+    text-align: right;
+  }
+
 }

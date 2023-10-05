@@ -4,7 +4,7 @@ import styles from "./index.module.css";
 import SobreMim from "./SobreMim";
 
 export default function HomePage() {
-  const [showBio, setShowBio] = useState(true);
+  const [showBio, setShowBio] = useState(false);
   return (
     <div className={styles.homePage}>
       <h2>
