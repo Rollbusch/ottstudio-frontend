@@ -9,7 +9,7 @@ export default function Container({ children }) {
     <main className={styles.wip}>
       <Image className={styles.logo} src={Logo} alt="logo" />
       <div className={styles.content}>
-        <h4>EM BREVE <br/> AQUI!</h4>
+        <h4>EM BREVE!</h4>
         <p>BRANDING</p>
         <p>IDENTIDADE VISUAL</p>
         <p>ESTRATÉGIA E GESTÃO</p>
