@@ -92,4 +92,10 @@
     text-align: right;
   }
 
+  .crossCta::after,
+  .crossCta::before {
+    left: 0;
+    right: 0;
+  }
+
 }

@@ -5,10 +5,10 @@ import Image from "next/image";
 
 export default function SobreMim({ showBio }) {
   return (
-    <div className={`${styles.sobreMim} ${showBio ? styles.show : styles.hide}`}>
+    <div className={`${styles.sobreMim} ${showBio ? styles.show : styles.hide}`} id="sobre-mim">
       <div className={styles.imageGroup}>
         <Image src={Placeholder} alt="picture" priority />
-        <h4>Prazer, João.</h4>
+        <h3>Prazer, João.</h3>
       </div>
       <p>
         Sou formado em design e mestre em publicidade pelo IADE - Faculdade de

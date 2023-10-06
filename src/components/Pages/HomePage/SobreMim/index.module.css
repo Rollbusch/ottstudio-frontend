@@ -16,7 +16,7 @@
   position: relative;
 }
 
-.imageGroup h4 {
+.imageGroup h3 {
   position: absolute;
   color: #0016ff;
   font-size: 25.12px;
@@ -50,6 +50,16 @@
   .sobreMim {
     max-width: 100%;
   }
+
+  .show {
+    height: 100%;
+  }
+
+  .hide {
+    height: 0;
+    overflow: hidden;
+  }
+
   .imageGroup {
     width: 100%;
     height: auto;
@@ -58,4 +68,4 @@
   .sobreMim p {
     padding: 0 1.5rem ;
   }
-}
+ }

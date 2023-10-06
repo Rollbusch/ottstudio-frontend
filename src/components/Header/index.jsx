@@ -69,10 +69,10 @@ export default function Header() {
               ))}
             </div>
             <div className={styles.icons}>
-              <a href="https://www.instagram.com/aprendasobrelogo/" target="_blank" aria-label="Ir para Instagram">
+              <a href="https://www.behance.net/ottstudio" target="_blank" aria-label="Ir para behance">
                 <div />
               </a>
-              <a href="https://www.behance.net/ottstudio" target="_blank" aria-label="Ir para behance">
+              <a href="https://www.instagram.com/aprendasobrelogo/" target="_blank" aria-label="Ir para Instagram">
                 <div />
               </a>
             </div>

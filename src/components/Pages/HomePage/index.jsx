@@ -2,9 +2,19 @@ import { useState } from "react";
 import styles from "./index.module.css";
 
 import SobreMim from "./SobreMim";
+import { useRouter } from "next/router";
 
 export default function HomePage() {
   const [showBio, setShowBio] = useState(false);
+  const router = useRouter('')
+  
+  const handleClick = () => {
+    if (!showBio) {
+      router.push('/#sobre-mim')
+    }
+    setShowBio(!showBio)
+  }
+
   return (
     <div className={styles.homePage}>
       <h2>
@@ -14,7 +24,7 @@ export default function HomePage() {
         className={`${styles.crossCta} ${
           showBio ? styles.uncross : styles.cross
         }`}
-        onClick={() => setShowBio(!showBio)}
+        onClick={() => handleClick()}
       ></div>
       <SobreMim {...{ showBio }} />
     </div>
