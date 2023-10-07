@@ -1,0 +1,53 @@
+.contato {
+  display: flex;
+}
+
+.text {
+  max-width: 400px;
+}
+
+.text h2 {
+  font-size: 36.01px;
+  font-weight: 300;
+  word-wrap: break-word;
+  color: var(--letter-color);
+  margin-bottom: 30px;
+}
+
+.text p,
+.text a {
+  color: var(--letter-color);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 21px;
+  word-wrap: break-word;
+  text-decoration: none;
+}
+
+.text a strong {
+  margin-top: 5px;
+  display: block;
+}
+
+.contatoExtra {
+  margin-top: 6.5rem;
+}
+
+.contato iframe {
+  margin: auto;
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 576px) {
+  .contato {
+    padding: 0 1rem;
+  }
+}
