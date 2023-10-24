@@ -1,0 +1,14 @@
+.projetos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.projetos img {
+  cursor: pointer;
+  max-width: 498px;
+  max-height: 396px;
+  width: 100%;
+  height: auto;
+}

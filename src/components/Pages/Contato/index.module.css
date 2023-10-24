@@ -44,10 +44,23 @@
 }
 
 @media (max-width: 768px) {
+  .contato {
+    flex-direction: column;
+  }
+
+  .contato iframe {
+    width: 100%;
+  }
+
+  .contatoExtra {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
 }
 
 @media (max-width: 576px) {
   .contato {
     padding: 0 1rem;
+    flex-direction: column;
   }
 }
