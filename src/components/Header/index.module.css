@@ -1,5 +1,5 @@
 .header {
-  padding: 2.5rem;
+  padding: 1.5rem;
 }
 
 .content {
@@ -28,7 +28,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 6rem;
+  gap: 4.5rem;
   position: relative;
 }
 
@@ -48,7 +48,6 @@
 
 .navigation a.ativo {
   color: var(--active-letter-color);
-  font-weight: 700 !important;
   position: relative;
 }
 
@@ -83,10 +82,10 @@
 
 .group > a > div {
   background-image: var(--logo);
-  background-size: auto;
+  background-size: 53px 42px;
   background-repeat: no-repeat;
-  width: 70px;
-  height: 60px;
+  width: 53px;
+  height: 42px;
 }
 
 .icons > a > div {
@@ -111,18 +110,15 @@
 @media (width <= 1400px) {
   .navigation,
   .links {
-    gap: 5rem;
+    gap: 4rem;
   }
 
-  .header {
-    padding: 2rem;
-  }
 }
 
 @media (width <= 1200px) {
   .navigation,
   .links {
-    gap: 4rem;
+    gap: 3.5rem;
   }
 }
 
@@ -132,9 +128,6 @@
     gap: 2rem;
   }
 
-  .header {
-    padding: 1.5rem;
-  }
 }
 
 @media (max-width: 768px) {
@@ -147,10 +140,6 @@
     background-size: 60px 40px;
     width: 60px;
     height: 40px;
-  }
-
-  .header {
-    padding: 1rem;
   }
 
   .icons {

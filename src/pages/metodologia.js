@@ -1,4 +1,6 @@
+import Content from "@/components/Content";
 import Header from "@/components/Header";
+import MetodologiaComponent from "@/components/Pages/Metodologia";
 import Head from "next/head";
 
 export default function Home() {
@@ -11,7 +13,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main></main>
+      <main>
+        <Content>
+          <MetodologiaComponent />
+        </Content>
+      </main>
     </>
   );
 }

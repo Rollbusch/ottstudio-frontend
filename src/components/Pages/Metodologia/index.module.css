@@ -1,0 +1,144 @@
+.metodologia {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 100px;
+}
+
+.text {
+  max-width: 287px;
+}
+
+.text h2 {
+  font-size: 36.01px;
+  font-weight: 300;
+  word-wrap: break-word;
+  color: var(--letter-color);
+  margin-bottom: 30px;
+}
+
+.text p,
+.text a {
+  color: var(--letter-color);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 21px;
+  word-wrap: break-word;
+  text-decoration: none;
+}
+
+.text a strong {
+  margin-top: 5px;
+  display: block;
+}
+
+.metodologiaExtra {
+  margin-top: 6.5rem;
+}
+
+.metodos {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 712px;
+  gap: 1.5rem 3.5rem;
+}
+
+.arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 228px;
+  gap: 1rem;
+}
+
+.arrows img {
+  cursor: pointer;
+}
+
+.metodos + .arrows {
+  display: none;
+}
+
+@media (max-width: 1400px) {
+  .metodologia {
+    padding-right: 25px;
+  }
+
+  .metodos {
+    gap: 1.5rem 2rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .metodologia {
+    padding-right: 0;
+  }
+
+  .metodos {
+    gap: 1.5rem 1.5rem;
+    width: 648px;
+  }
+}
+
+@media (max-width: 992px) {
+  .metodologia {
+    padding-right: 0;
+  }
+
+  .metodos {
+    gap: 1.5rem 1.5rem;
+    width: 424px;
+  }
+}
+
+@media (max-width: 768px) {
+  .metodologia {
+    flex-direction: column;
+  }
+
+  .metodologiaExtra {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .metodos {
+    margin-top: 2rem;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .metodologia {
+    padding: 0 1rem;
+    flex-direction: column;
+  }
+
+  .metodos {
+    margin-top: 50px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: fit-content;
+    width: 100%;
+    gap: 2.5rem;
+  }
+
+  .metodos::-webkit-scrollbar {
+    height: 0;
+  }
+
+  .metodos > .arrows {
+    display: none;
+  }
+
+  .metodos + .arrows {
+    display: flex;
+    width: 100%;
+    margin-top: 2rem;
+    height: fit-content;
+    padding-bottom: 4rem;
+  }
+}
