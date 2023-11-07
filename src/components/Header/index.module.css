@@ -247,7 +247,7 @@
   }
 
   .content input:checked + .navigation {
-    position: absolute;
+    position: fixed;
     right: 0;
     transition: 0.5s ease-in-out;
     align-items: center;
@@ -255,6 +255,7 @@
     width: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+    height: 100%;
   }
 
   .navigation .links {
@@ -265,6 +266,7 @@
   .navigation {
     align-items: flex-start !important;
     gap: 2rem !important;
+    height: 100%;
     /* box-shadow: 0 2px 21px rgba(0,0,0,.07); */
   }
 

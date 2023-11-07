@@ -1,4 +1,4 @@
-.metodologia {
+.metodologiasComponent {
   display: flex;
   justify-content: space-between;
   padding-right: 100px;
@@ -13,17 +13,22 @@
   font-weight: 300;
   word-wrap: break-word;
   color: var(--letter-color);
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
-.text p,
 .text a {
-  color: var(--letter-color);
-  font-size: 20px;
+  color: #fff;
+  font-size: 13.4px;
   font-weight: 300;
-  line-height: 21px;
-  word-wrap: break-word;
+  text-transform: lowercase;
+  line-height: 18.09px;
   text-decoration: none;
+  background-color: var(--letter-color);
+  width: 200px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .text a strong {
@@ -31,15 +36,10 @@
   display: block;
 }
 
-.metodologiaExtra {
-  margin-top: 6.5rem;
-}
-
-.metodos {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 712px;
-  gap: 1.5rem 3.5rem;
+.metodologias {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 120px 120px 120px;
 }
 
 .arrows {
@@ -55,53 +55,53 @@
   cursor: pointer;
 }
 
-.metodos + .arrows {
+.materiais + .arrows {
   display: none;
 }
 
 @media (max-width: 1400px) {
-  .metodologia {
+  .metodologiasComponent {
     padding-right: 25px;
   }
 
-  .metodos {
+  .materiais {
     gap: 1.5rem 2rem;
   }
 }
 
 @media (max-width: 1200px) {
-  .metodologia {
+  .metodologiasComponent {
     padding-right: 0;
   }
 
-  .metodos {
+  .materiais {
     gap: 1.5rem 1.5rem;
     width: 648px;
   }
 }
 
 @media (max-width: 992px) {
-  .metodologia {
+  .metodologiasComponent {
     padding-right: 0;
   }
 
-  .metodos {
+  .materiais {
     gap: 1.5rem 1.5rem;
     width: 424px;
   }
 }
 
 @media (max-width: 768px) {
-  .metodologia {
+  .metodologiasComponent {
     flex-direction: column;
   }
 
-  .metodologiaExtra {
+  .contatoExtra {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
   }
-  
-  .metodos {
+
+  .materiais {
     margin-top: 2rem;
     justify-content: center;
     width: 100%;
@@ -109,12 +109,12 @@
 }
 
 @media (max-width: 576px) {
-  .metodologia {
+  .metodologiasComponent {
     padding: 0 1rem;
     flex-direction: column;
   }
 
-  .metodos {
+  .materiais {
     margin-top: 50px;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -126,15 +126,15 @@
     gap: 2.5rem;
   }
 
-  .metodos::-webkit-scrollbar {
+  .materiais::-webkit-scrollbar {
     height: 0;
   }
 
-  .metodos > .arrows {
+  .materiais > .arrows {
     display: none;
   }
 
-  .metodos + .arrows {
+  .materiais + .arrows {
     display: flex;
     width: 100%;
     margin-top: 2rem;

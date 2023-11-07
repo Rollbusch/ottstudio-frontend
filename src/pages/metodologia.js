@@ -1,9 +1,9 @@
 import Content from "@/components/Content";
 import Header from "@/components/Header";
-import MetodologiaComponent from "@/components/Pages/Metodologia";
+import MetodologiasComponent from "@/components/Pages/Metodologias";
 import Head from "next/head";
 
-export default function Home() {
+export default function Metodologia() {
   return (
     <>
       <Head>
@@ -15,7 +15,7 @@ export default function Home() {
       <Header />
       <main>
         <Content>
-          <MetodologiaComponent />
+          <MetodologiasComponent />
         </Content>
       </main>
     </>

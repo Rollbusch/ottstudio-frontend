@@ -1,11 +1,11 @@
-import MetodoComponent from "./Metodo";
+import MaterialComponent from "./Material";
 import styles from "./index.module.css";
 
 import ArrowLeft from './assets/ArrowLeft.svg'
 import ArrowRight from './assets/ArrowRight.svg'
 import Image from "next/image";
 
-export default function MetodologiaComponent() {
+export default function MateriaisComponent() {
   const staticValues = [
     {
       tipo: "e-book",
@@ -34,7 +34,7 @@ export default function MetodologiaComponent() {
     },
   ];
   return (
-    <div className={styles.metodologia}>
+    <div className={styles.materiaisComponent}>
       <div className={styles.text}>
         <h2>
           Aprenda mais <br />
@@ -49,9 +49,9 @@ export default function MetodologiaComponent() {
           </a>
         </div>
       </div>
-      <div className={styles.metodos}>
-        {staticValues.map((metodo, index) => (
-          <MetodoComponent key={index} {...{ metodo }} />
+      <div className={styles.materiais}>
+        {staticValues.map((material, index) => (
+          <MaterialComponent key={index} {...{ material }} />
         ))}
         <div className={styles.arrows}>
           <Image src={ArrowLeft} alt="arrow-left" />
