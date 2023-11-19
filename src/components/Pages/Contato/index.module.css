@@ -12,6 +12,7 @@
   word-wrap: break-word;
   color: var(--letter-color);
   margin-bottom: 30px;
+  line-height: 37.81px;
 }
 
 .text p,

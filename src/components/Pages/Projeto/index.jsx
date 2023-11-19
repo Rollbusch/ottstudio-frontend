@@ -26,7 +26,7 @@ export default function () {
           ultrices tortor penatibus. Consectetur viverra ultrices maecenas
           etiam.
         </p>
-        <Link href="/contato">Solicitar orçamento</Link>
+        <Link href="/orcamento">Solicitar orçamento</Link>
       </div>
     </div>
   );

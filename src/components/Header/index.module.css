@@ -112,7 +112,6 @@
   .links {
     gap: 4rem;
   }
-
 }
 
 @media (width <= 1200px) {
@@ -127,7 +126,6 @@
   .links {
     gap: 2rem;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -237,13 +235,13 @@
     background-color: var(--background-color);
     flex-direction: column;
     right: calc(100% * -1);
-    top: 92px;
-    width: 100%;
+    top: 0;
+    width: 0;
     height: fit-content;
     transition: 0.5s ease-in-out;
     padding-bottom: 2.5rem;
-    width: 0;
     overflow: hidden;
+    height: 100%;
   }
 
   .content input:checked + .navigation {
@@ -256,6 +254,7 @@
     overflow-x: hidden;
     overflow-y: auto;
     height: 100%;
+    top: 0;
   }
 
   .navigation .links {
@@ -267,7 +266,12 @@
     align-items: flex-start !important;
     gap: 2rem !important;
     height: 100%;
+    top: 0;
     /* box-shadow: 0 2px 21px rgba(0,0,0,.07); */
+  }
+
+  .navigation .group {
+    padding: 1.5rem;
   }
 
   .links > a {

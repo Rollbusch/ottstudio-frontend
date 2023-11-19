@@ -49,7 +49,7 @@ export default function MetodologiasComponent() {
           Desenvolvemos <br /> marcas através <br /> da co-criação.
         </h2>
         <div className={styles.contatoExtra}>
-          <Link href="/contato">Solicitar orçamento</Link>
+          <Link href="/orcamento">Solicitar orçamento</Link>
         </div>
       </div>
       <div className={styles.metodologias}>

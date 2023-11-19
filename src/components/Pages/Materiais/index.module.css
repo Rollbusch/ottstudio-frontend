@@ -14,6 +14,7 @@
   word-wrap: break-word;
   color: var(--letter-color);
   margin-bottom: 30px;
+  line-height: 37.81px;
 }
 
 .text p,
@@ -100,7 +101,7 @@
     margin-top: 1.5rem;
     margin-bottom: 1rem;
   }
-  
+
   .materiais {
     margin-top: 2rem;
     justify-content: center;

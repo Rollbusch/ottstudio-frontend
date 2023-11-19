@@ -1,28 +1,28 @@
+.metodologia {
+  display: flex;
+  gap: 0.25rem;
+  align-items: baseline;
+  width: 230px;
+}
+.metodologia > p {
+  font-size: 15.47px;
+  line-height: 21.96px;
+}
+
+.metodologia h3 {
+  color: #0d0d0d;
+  font-size: 18.31px;
+  line-height: 26px;
+  margin-bottom: 2px;
+}
+
+.text p {
+  color: #727272;
+  font-size: 12.37px;
+  font-weight: 300;
+  line-height: 16.7px;
+}
 @media (max-width: 1400px) {
-  .metodologia {
-    display: flex;
-    gap: 0.25rem;
-    align-items: baseline;
-    width: 230px;
-  }
-  .metodologia > p {
-    font-size: 15.47px;
-    line-height: 21.96px;
-  }
-
-  .metodologia h3 {
-    color: #0d0d0d;
-    font-size: 18.31px;
-    line-height: 26px;
-    margin-bottom: 2px;
-  }
-
-  .text p {
-    color: #727272;
-    font-size: 12.37px;
-    font-weight: 300;
-    line-height: 16.7px;
-  }
 }
 
 @media (max-width: 1200px) {

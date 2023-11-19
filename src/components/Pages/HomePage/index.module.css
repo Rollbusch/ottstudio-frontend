@@ -12,6 +12,7 @@
   color: var(--letter-color);
   position: relative;
   padding-right: 6rem;
+  line-height: 37.81px;
 }
 
 .crossCta {
@@ -97,5 +98,4 @@
     left: 0;
     right: 0;
   }
-
 }
