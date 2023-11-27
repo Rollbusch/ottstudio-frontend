@@ -25,7 +25,7 @@ export default function Header() {
       href: "/metodologia",
     },
     {
-      name: "orcamento",
+      name: "orçamento",
       href: "/orcamento",
     },
     {

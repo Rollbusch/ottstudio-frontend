@@ -131,7 +131,7 @@
 @media (max-width: 768px) {
   .navigation,
   .links {
-    gap: 1rem;
+    gap: 0.5rem;
   }
 
   .group a div {
@@ -155,7 +155,7 @@
   }
 }
 
-@media (width <= 576px) {
+@media (width < 576px) {
   .sandwichMenu {
     display: block;
     position: relative;

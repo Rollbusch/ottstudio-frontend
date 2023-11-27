@@ -4,7 +4,7 @@ import styles from "./index.module.css";
 import SobreMim from "./SobreMim";
 import { useRouter } from "next/router";
 
-export default function HomePage() {
+export default function HomePage({ data }) {
   const [showBio, setShowBio] = useState(false);
   const router = useRouter('')
   

@@ -3,7 +3,8 @@ import Content from "@/components/Content";
 import HomePage from "@/components/Pages/HomePage";
 import Head from "next/head";
 
-export default function Home() {
+export default function Home(props) {
+
   return (
     <>
       <Head>
