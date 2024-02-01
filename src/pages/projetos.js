@@ -3,7 +3,8 @@ import Header from "@/components/Header";
 import Projetos from "@/components/Pages/Projetos";
 import Head from "next/head";
 
-export default function Home() {
+export default function Home({ projetos }) {
+
   return (
     <>
       <Head>
@@ -14,8 +15,24 @@ export default function Home() {
       </Head>
       <Header />
       <Content>
-        <Projetos />
+        <Projetos {...{ projetos }} />
       </Content>
     </>
   );
+}
+
+export async function getStaticProps () {
+  const getData = async () => {
+    const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projetos?populate=banner`)
+    if (!data.ok) return { data: [] }
+    return await data.json()
+  }
+  
+  const projetos = await getData()
+
+  return {
+    props: {
+      projetos
+    }
+  }
 }

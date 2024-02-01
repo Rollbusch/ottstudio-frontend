@@ -2,7 +2,6 @@ import Content from "@/components/Content";
 import Header from "@/components/Header";
 import Projeto from "@/components/Pages/Projeto";
 import Head from "next/head";
-import Image from "next/image";
 
 export default function () {
   return (
@@ -21,4 +20,41 @@ export default function () {
       </main>
     </>
   );
+}
+
+export async function getStaticProps (props) {
+
+  const projeto = await getData(`projeto/${props.params.slug}`)
+
+  return {
+    props: {
+      projeto
+    },
+    revalidate: 60 // 60s
+  }
+}
+
+export async function getStaticPaths () {
+
+  const projetos = await getData(`projetos?fields[0]=slug`)
+  const paths = projetos.data.map(projeto => ({
+    params: {
+      slug: projeto.attributes.slug
+    }
+  }))
+
+  return {
+    paths,
+    fallback: false
+  }
+}
+
+async function getData (endpoint) {
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/${endpoint}`, {
+    headers: {
+      'Authorization': process.env.NEXT_PUBLIC_API_TOKEN
+    }
+  })
+  if (!data.ok) return { data: [] }
+  return await data.json()
 }

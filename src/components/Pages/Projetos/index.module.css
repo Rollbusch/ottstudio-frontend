@@ -7,10 +7,12 @@
 
 .projetos img {
   cursor: pointer;
-  max-width: 498px;
-  max-height: 396px;
-  width: 100%;
-  height: auto;
+}
+
+.image {
+  position: relative;
+  width: 498px;
+  height: 396px;
 }
 
 @media (max-width: 768px) {
