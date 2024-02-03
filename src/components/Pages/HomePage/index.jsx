@@ -2,16 +2,11 @@ import { useState } from "react";
 import styles from "./index.module.css";
 
 import SobreMim from "./SobreMim";
-import { useRouter } from "next/router";
 
-export default function HomePage({ data }) {
+export default function HomePage({ sobreMim }) {
   const [showBio, setShowBio] = useState(false);
-  const router = useRouter('')
   
   const handleClick = () => {
-    if (!showBio) {
-      router.push('/#sobre-mim')
-    }
     setShowBio(!showBio)
   }
 
@@ -26,7 +21,11 @@ export default function HomePage({ data }) {
         }`}
         onClick={() => handleClick()}
       ></div>
-      <SobreMim {...{ showBio }} />
+      {
+        !Array.isArray(sobreMim.data) && (
+          <SobreMim {...{ showBio, sobreMim }} />
+        )
+      }
     </div>
   );
 }

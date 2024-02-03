@@ -35,13 +35,19 @@
   margin-top: 1rem;
 }
 
+.image {
+  position: relative;
+  width: 545px;
+  height: 298px;
+}
+
 @media (max-width: 992px) {
   .sobreMim {
     max-width: 345px;
   }
-  .imageGroup img {
+  .image {
     width: 100%;
-    height: auto;
+    height: 196px;
   }
 }
 

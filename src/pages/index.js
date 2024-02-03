@@ -3,7 +3,9 @@ import Content from "@/components/Content";
 import HomePage from "@/components/Pages/HomePage";
 import Head from "next/head";
 
-export default function Home(props) {
+import { getData } from "@/utils/strapi";
+
+export default function Home({ sobreMim }) {
 
   return (
     <>
@@ -20,8 +22,21 @@ export default function Home(props) {
       </Head>
       <Header />
       <Content>
-        <HomePage />
+        <HomePage {...{ sobreMim }} />
       </Content>
     </>
   );
+}
+
+
+export async function getStaticProps () {
+
+  const sobreMim = await getData(`sobre-mim?populate=*`)
+
+  return {
+    props: {
+      sobreMim
+    },
+    revalidate: 10 // 60s
+  }
 }
