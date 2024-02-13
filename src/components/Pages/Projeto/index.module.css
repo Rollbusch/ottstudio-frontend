@@ -71,10 +71,11 @@
     padding: 0 1rem;
     margin: 0 auto;
   }
+}
 
+@media (max-width: 60rem) {
   .mainContent {
     max-width: 100%;
     height: 286px;
   }
-
 }

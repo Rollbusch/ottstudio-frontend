@@ -5,7 +5,7 @@
 .image {
   width: 200px;
   height: 228px;
-  background-color: blue;
+  position: relative;
 }
 
 .material span {

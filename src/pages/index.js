@@ -4,23 +4,8 @@ import HomePage from "@/components/Pages/HomePage";
 import Head from "next/head";
 
 import { getData } from "@/utils/strapi";
-import { useDadosContext } from "@/context/dados";
-import { useEffect } from "react";
 
 export default function Home({ sobreMim }) {
-
-  const dados = useDadosContext() 
-
-  useEffect(() => {
-    if (sobreMim.data.length == 0) {
-      return
-
-    }
-    const sobreMimData = sobreMim.data.attributes
-    dados.setEmail(sobreMimData.email)
-    dados.setNome(sobreMimData.nome)
-  }, [])
-
 
   return (
     <>

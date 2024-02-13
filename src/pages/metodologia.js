@@ -1,9 +1,10 @@
 import Content from "@/components/Content";
 import Header from "@/components/Header";
 import MetodologiasComponent from "@/components/Pages/Metodologias";
+import { getData } from "@/utils/strapi";
 import Head from "next/head";
 
-export default function Metodologia() {
+export default function Metodologia({ metodologia }) {
   return (
     <>
       <Head>
@@ -15,9 +16,22 @@ export default function Metodologia() {
       <Header />
       <main>
         <Content>
-          <MetodologiasComponent />
+          <MetodologiasComponent {...{ metodologia }} />
         </Content>
       </main>
     </>
   );
 }
+
+export async function getStaticProps () {
+  
+  const metodologia = await getData('/metodologia?populate=*')
+
+  return {
+    props: {
+      metodologia
+    },
+    revalidate: 60 // seconds
+  }
+}
+

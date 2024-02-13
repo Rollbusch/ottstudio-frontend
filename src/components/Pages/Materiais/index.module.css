@@ -56,6 +56,10 @@
   cursor: pointer;
 }
 
+.arrows a {
+  display: flex;
+}
+
 .materiais + .arrows {
   display: none;
 }

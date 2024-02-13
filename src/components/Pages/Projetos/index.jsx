@@ -7,7 +7,6 @@ import Link from "next/link";
 export default function Projetos({ projetos }) {
 
   const getImage = (projeto) => {
-    console.log(projeto)
     if (!projeto) return ''
     const imageUrl = projeto.banner.data.attributes.url
     const url = getImageUrl(imageUrl)

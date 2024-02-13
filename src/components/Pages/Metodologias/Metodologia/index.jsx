@@ -1,14 +1,12 @@
 import styles from "./index.module.css";
 
-import Image from "next/image";
-
-export default function ({ metodologia, index }) {
+export default function ({ metodo, index }) {
   return (
     <div className={styles.metodologia}>
       <p>{index + 1}.</p>
       <div className={styles.text}>
-        <h3>{metodologia.titulo}</h3>
-        <p>{metodologia.descricao}</p>
+        <h3>{metodo.attributes.titulo}</h3>
+        <p>{metodo.attributes.descricao}</p>
       </div>
     </div>
   );

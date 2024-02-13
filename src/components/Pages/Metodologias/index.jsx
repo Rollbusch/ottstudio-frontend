@@ -3,45 +3,8 @@ import styles from "./index.module.css";
 
 import Link from "next/link";
 
-export default function MetodologiasComponent() {
-  const staticValues = [
-    {
-      titulo: "On-boarding",
-      descricao: "lorem ipsum",
-    },
-    {
-      titulo: "Contrato",
-      descricao: "lorem ipsum",
-    },
-    {
-      titulo: "Pesquisa",
-      descricao: "lorem ipsum",
-    },
-    {
-      titulo: "Desenvolvimento",
-      descricao: "lorem ipsum",
-    },
-    {
-      titulo: "Amadurecimento",
-      descricao: "lorem ipsum",
-    },
-    {
-      titulo: "Apresentação prévia",
-      descricao: "lorem ipsum",
-    },
-    {
-      titulo: "Aprimoramento",
-      descricao: "lorem ipsum",
-    },
-    {
-      titulo: "Apresentação final",
-      descricao: "lorem ipsum",
-    },
-    {
-      titulo: "Entrega",
-      descricao: "lorem ipsum",
-    },
-  ];
+export default function MetodologiasComponent({ metodologia }) {
+
   return (
     <div className={styles.metodologiasComponent}>
       <div className={styles.text}>
@@ -53,8 +16,8 @@ export default function MetodologiasComponent() {
         </div>
       </div>
       <div className={styles.metodologias}>
-        {staticValues.map((metodologia, index) => (
-          <Metodologia key={index} {...{ metodologia, index }} />
+        {metodologia.data.attributes.metodos.data.map((metodo, index) => (
+          <Metodologia key={metodo.id} {...{ metodo, index }} />
         ))}
       </div>
     </div>

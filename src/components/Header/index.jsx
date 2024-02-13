@@ -38,6 +38,12 @@ export default function Header() {
     if (router.pathname == page) {
       return styles.ativo;
     }
+    if (page != '/' && router.pathname.includes(page)) {
+      return styles.ativo;
+    } 
+    if (router.pathname == '/projeto/[slug]' && page == '/projetos') {
+      return styles.ativo;
+    }
     return "";
   };
 

@@ -24,8 +24,7 @@ export default function Materiais({ materiais }) {
 }
 
 export async function getStaticProps () {
-
-  const materiais = await getData(`materiais?populate=*`)
+  const materiais = await getData(`materials?populate=*&pagination[pageSize]=5`)
 
   return {
     props: {
