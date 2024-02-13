@@ -5,34 +5,8 @@ import ArrowLeft from './assets/ArrowLeft.svg'
 import ArrowRight from './assets/ArrowRight.svg'
 import Image from "next/image";
 
-export default function MateriaisComponent() {
-  const staticValues = [
-    {
-      tipo: "e-book",
-      valor: 0,
-      titulo: "7 dicas para designers iniciantes",
-    },
-    {
-      tipo: "e-book",
-      valor: 0,
-      titulo: "Breve história do design de marcas",
-    },
-    {
-      tipo: "e-book",
-      valor: 3,
-      titulo: "Desenvolvimento de marcas gráficas",
-    },
-    {
-      tipo: "e-book",
-      valor: 2,
-      titulo: "3 métodologias em design para projetos",
-    },
-    {
-      tipo: "e-book",
-      valor: 1,
-      titulo: "Em breve",
-    },
-  ];
+export default function MateriaisComponent({ materiais }) {
+ 
   return (
     <div className={styles.materiaisComponent}>
       <div className={styles.text}>
@@ -50,7 +24,7 @@ export default function MateriaisComponent() {
         </div>
       </div>
       <div className={styles.materiais}>
-        {staticValues.map((material, index) => (
+        {[].map((material, index) => (
           <MaterialComponent key={index} {...{ material }} />
         ))}
         <div className={styles.arrows}>

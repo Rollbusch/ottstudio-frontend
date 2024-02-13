@@ -23,7 +23,7 @@ export default function Home({ projetos }) {
 
 export async function getStaticProps () {
   const getData = async () => {
-    const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projetos?populate=banner`)
+    const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projetos?populate=*`)
     if (!data.ok) return { data: [] }
     return await data.json()
   }
@@ -33,6 +33,7 @@ export async function getStaticProps () {
   return {
     props: {
       projetos
-    }
+    },
+    revalidate: 60 // seconds
   }
 }

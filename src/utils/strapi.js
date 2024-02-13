@@ -1,7 +1,7 @@
 export async function getData (endpoint) {
   const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/${endpoint}`, {
     headers: {
-      'Authorization': process.env.NEXT_PUBLIC_API_TOKEN
+      'Authorization': `Bearer ${process.env.NEXT_PUBLIC_API_TOKEN}`
     }
   })
   if (!data.ok) return { data: [] }

@@ -1,9 +1,10 @@
 import Content from "@/components/Content";
 import Header from "@/components/Header";
 import MateriaisComponent from "@/components/Pages/Materiais";
+import { getData } from "@/utils/strapi";
 import Head from "next/head";
 
-export default function Materiais() {
+export default function Materiais({ materiais }) {
   return (
     <>
       <Head>
@@ -15,9 +16,21 @@ export default function Materiais() {
       <Header />
       <main>
         <Content>
-          <MateriaisComponent />
+          <MateriaisComponent {...{ materiais }} />
         </Content>
       </main>
     </>
   );
+}
+
+export async function getStaticProps () {
+
+  const materiais = await getData(`materiais?populate=*`)
+
+  return {
+    props: {
+      materiais
+    },
+    revalidate: 30 // 30s
+  }
 }

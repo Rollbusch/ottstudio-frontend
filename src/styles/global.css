@@ -26,3 +26,7 @@ body.whitescreen {
   --logo-behance: url("/logo-behance-blue.svg");
   --logo-instagram: url("/logo-instagram-blue.svg");
 }
+
+body::-webkit-scrollbar {
+  width: 0;
+}

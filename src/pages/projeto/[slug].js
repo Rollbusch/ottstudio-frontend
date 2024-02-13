@@ -1,9 +1,10 @@
 import Content from "@/components/Content";
 import Header from "@/components/Header";
 import Projeto from "@/components/Pages/Projeto";
+import { getData } from "@/utils/strapi";
 import Head from "next/head";
 
-export default function () {
+export default function ({ projeto }) {
   return (
     <>
       <Head>
@@ -15,7 +16,7 @@ export default function () {
       <Header />
       <main>
         <Content>
-          <Projeto />
+          <Projeto {... { projeto }} />
         </Content>
       </main>
     </>
@@ -47,14 +48,4 @@ export async function getStaticPaths () {
     paths,
     fallback: false
   }
-}
-
-async function getData (endpoint) {
-  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/${endpoint}`, {
-    headers: {
-      'Authorization': process.env.NEXT_PUBLIC_API_TOKEN
-    }
-  })
-  if (!data.ok) return { data: [] }
-  return await data.json()
 }

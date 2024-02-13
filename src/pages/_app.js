@@ -2,6 +2,7 @@ import "@/styles/global.css";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import localFont from "next/font/local";
+import { Dados } from "@/context/dados";
 
 const texGyreHeroes = localFont({
   src: [
@@ -35,7 +36,9 @@ export default function App({ Component, pageProps }) {
   return (
     <main className={texGyreHeroes.className}>
       <h1 style={{ display: "none" }}>Ottstudio</h1>
-      <Component {...pageProps} />
+      <Dados>
+        <Component {...pageProps} />
+      </Dados>
     </main>
   );
 }

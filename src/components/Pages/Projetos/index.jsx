@@ -1,3 +1,4 @@
+import { getImageUrl } from "@/utils/strapi";
 import styles from "./index.module.css";
 
 import Image from "next/image";
@@ -6,9 +7,10 @@ import Link from "next/link";
 export default function Projetos({ projetos }) {
 
   const getImage = (projeto) => {
+    console.log(projeto)
     if (!projeto) return ''
     const imageUrl = projeto.banner.data.attributes.url
-    const url = `${process.env.NEXT_PUBLIC_API_URL}${imageUrl}`
+    const url = getImageUrl(imageUrl)
     return url
   }
 

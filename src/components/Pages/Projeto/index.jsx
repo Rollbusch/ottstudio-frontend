@@ -5,26 +5,34 @@ import Link from "next/link";
 
 import ArrowLeft from "./assets/ArrowLeft.svg";
 import ArrowRight from "./assets/ArrowRight.svg";
-import Placeholder from "./assets/placeholder.png";
+import { getImageUrl } from "@/utils/strapi";
 
-export default function () {
+export default function ({ projeto }) {
   return (
     <div className={styles.projeto}>
       <div className={styles.mainContent}>
-        <Image className={styles.banner} src={Placeholder} alt="placeholder" />
+        <Image className={styles.banner} src={getImageUrl(projeto.data.attributes.banner.data.attributes.url)} alt="image" fill />
       </div>
       <div className={styles.buttons}>
-        <Image src={ArrowLeft} alt="arrow-left" />
-        <Image src={ArrowRight} alt="arrow-left" />
+        {
+          projeto.meta.prev ? (
+            <Link href={`/projeto/${projeto.meta.prev}`}>
+              <Image src={ArrowLeft} alt="arrow-left" />
+            </Link>
+          ) : <Image src={ArrowLeft} alt="arrow-left" style={{ opacity: 0.2, cursor: 'default'}} />
+        }
+        {
+          projeto.meta.next ? (
+            <Link href={`/projeto/${projeto.meta.next}`}>
+              <Image src={ArrowRight} alt="arrow-left" />
+            </Link>
+          ) : <Image src={ArrowRight} alt="arrow-left" style={{ opacity: 0.2, cursor: 'default'}} />
+        }
       </div>
       <div className={styles.text}>
-        <h2>Seiva Rosa Cosméticos</h2>
+        <h2>{projeto.data.attributes.titulo}</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur. Sed hendrerit varius eget et
-          lectus orci viverra facilisi varius. Sed sed odio elementum quam
-          libero dolor cras faucibus. Urna iaculis sit vulputate facilisi
-          ultrices tortor penatibus. Consectetur viverra ultrices maecenas
-          etiam.
+          {projeto.data.attributes.descricao}
         </p>
         <Link href="/orcamento">Solicitar orçamento</Link>
       </div>
