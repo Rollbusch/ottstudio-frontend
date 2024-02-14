@@ -16,7 +16,7 @@ export default function Projetos({ projetos }) {
   return (
     <div className={styles.projetos}>
       {projetos.data.map((projeto) => (
-        <Link key={projeto.id} href={`/projeto/${projeto.attributes.slug}`}>
+        <Link key={projeto.id} href={`/projetos/${projeto.attributes.slug}`}>
           <div className={styles.image}>
             <Image src={getImage(projeto.attributes)} alt="projeto" fill />
           </div>
