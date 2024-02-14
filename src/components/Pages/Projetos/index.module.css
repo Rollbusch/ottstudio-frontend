@@ -15,8 +15,17 @@
   height: 396px;
 }
 
+.image img {
+  object-fit: contain;
+}
+
 @media (max-width: 768px) {
   .projetos a {
    width: 100%;
   }
+
+  .image {
+    width: 100%;
+  }
+
 }
