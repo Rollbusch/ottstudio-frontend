@@ -8,15 +8,9 @@ export default function Container({ children }) {
   return (
     <main className={styles.wip}>
       <Image className={styles.logo} src={Logo} alt="logo" />
-      <div className={styles.content}>
-        <h4>EM BREVE!</h4>
-        <p>BRANDING</p>
-        <p>IDENTIDADE VISUAL</p>
-        <p>ESTRATÉGIA E GESTÃO</p>
-      </div>
       <div className={styles.contato}>
         <a href="mailto:contato@ottbrands.com">contato@ottbrands.com</a>
-        <a href="https://www.instagram.com/aprendasobrelogo/" target="_blank">@aprendasobrelogo</a>
+        <a href="https://www.instagram.com/joaoribeiro.me/" target="_blank">@joaoribeiro.me</a>
         <a href="https://www.behance.net/ottstudio" target="_blank">
           <Image src={LogoBehance} alt="behance" />
         </a>
