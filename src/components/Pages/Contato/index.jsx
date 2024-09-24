@@ -18,6 +18,9 @@ export default function Contato() {
           <a href="mailto:contato@ottbrands.com">
             <strong>contato@ottbrands.com</strong>
           </a>
+          <a href="https://wa.me/5514996734687?text=Ol%C3%A1,%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.">
+            <strong>+55 14 99673-4687</strong>
+          </a>
         </div>
       </div>
       <iframe
